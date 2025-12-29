@@ -3,6 +3,9 @@ import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
+const BACKEND_API = import.meta.env.VITE_BACKEND_API;
+console.log("BACKEND_API =>", BACKEND_API);
+
 const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -15,7 +18,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/admin/login",
+        `${BACKEND_API}/api/admin/login`,
         { email, password }
       );
 

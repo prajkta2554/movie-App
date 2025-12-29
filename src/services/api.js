@@ -20,7 +20,7 @@ export const fetchMovieById = async (id) => {
 
 // BACKEND API
 
-export const BACKEND_API = "http://localhost:5000/api";
+export const BACKEND_API = "https://movie-backend-production-507a.up.railway.app";
 
 //  USER FEATURES
 
